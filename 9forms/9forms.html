@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="/home/register">
+        <!--action attribute'u bu formun nereye gonderilecegini belirler
+        kullanici asagidaki bilgileri doldurdugunda bunlari ilgili yere gondermek icin
+        formun altinda bir butona ihtiyac duyar
+        daha sonra bu bilgileri ilgili yerden de server'a  gonderir ancak asagidaki kontrollere bir isim vermem gerekir ki server kodu bunlari anlasin-->
+
+        <p>
+            <!--required yani bu alan bos gecilemez-->
+            <!--placeholder="" bize on izleme ile ne yapmamiz gerektigini gosterir
+            ornegin; placeholder="adinizi girin, bos kutucugun icinde bu metin yazarsss"-->
+            ad <input type="text" name="ad" placeholder="adinizi girin" required>
+        </p>
+
+        <p>
+            soyad <input type="text" name="soyad" placeholder="soyadinizi girin" required>
+        </p>
+
+        <p>
+            <!--burada type email oldugu icin required dedigimde kullanici @... yapmazsa hata verir-->
+            email <input type="email" name="email" placeholder="email adresinizi girin" required>
+        </p>
+
+        <p>
+            <!--check atabilecegim bir kutucuk olusturur-->
+            beni hatirla <input type="checkbox" name="beniHatirla">
+        </p>
+
+        <p>
+            <!--secenek yapabilecegim ici bos yuvarlak alanlar olusturur
+            burada dikkat etmem gereken sey "name" kismini yazmazsam birden fazla secim yapabilirim
+            tek secim yapmam icin name kismini doldurmam gerekir-->
+            erkek <input type="radio" name="cinsiyet">
+            kadin <input type="radio" name="cinsiyet">
+        </p>
+
+        <p>
+            hobiler <br>
+
+            <!--burada da birden fazla checkbox olusturdum, "name" kismi olmasina ragmen birden fazla secenek isaretleyebilirim cunku burada radio degil checkbox kullandim-->
+            sinema <input type="checkbox" name="hobi">
+            tiyatro <input type="checkbox" name="hobi">
+            spor <input type="checkbox" name="hobi">
+            kitap okumak <input type="checkbox" name="hobi">
+            resim yapmak <input type="checkbox" name="hobi">
+        </p>
+
+        <p>
+            <!--select ile secim ekrani olusturuyorum ve oka tikladigimda asagi dogru secenekler cikar-->
+            <select name="sehir">
+                <option>istanbul</option>
+                <option>mugla</option>
+                <option>canakkale</option>
+                <option>sakarya</option>
+            </select>
+        </p>
+
+        <p>
+            <!--burada da kullanici ctrl tusuna basili tutarak coklu secim yapar-->
+            <select multiple name="sehirler">
+                <option>istanbul</option>
+                <option>mugla</option>
+                <option>canakkale</option>
+                <option>sakarya</option>
+            </select>
+        </p>
+
+        <!--burada submit ile bir buton olusturdum ve value ile isimlendirdim-->
+        <input type="submit" value="kaydet">
+
+        <!--daha fazlasini ogrenmek icin google'a html input types yazabilirsin-->
+
+    </form>
+
+</body>
+
+</html>
