@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tablolar</title>
+</head>
+
+<body>
+
+    <!--border="1" attribute'u kenarliklari temsil eder
+    width="100% satiri tamamen kapsamasina yarar, % isareti sona gelir-->
+    <table border="3" width="100%">
+
+
+        <!--baslik olusturmak icin th yani table header kullaniyorum, th alanlari daha koyu olur-->
+        <!--thead baslik kismini ifade eder, bu araligi kapsamali, standart kullanim budur-->
+        <thead>
+
+            <tr>
+                <th>kurs adi</th>
+                <th>saat</th>
+                <th>ders adedi</th>
+            </tr>
+
+        </thead>
+
+        <!--tbody body kismini ifade eder, bu araligi kapsamali, standart kullanim budur-->
+        <tbody>
+
+            <!--tr satiri temsil eder-->
+            <tr>
+                <!--td kolonu temsil eder, buraya verilerimizi gireriz-->
+                <td>komple web gelistirme</td>
+                <td>45</td>
+                <td>300</td>
+            </tr>
+
+            <tr>
+                <td>core 2 mvc egitimi</td>
+                <td>30</td>
+                <!--rowspan="2" yani benim 2 satirimdaki alt alta bulunan 2 satiri birlestirecegim-->
+                <td rowspan="2">200</td>
+            </tr>
+
+            <tr>
+                <!--colspan="2" yani benim bu satirimda 2 kolonu da sen kapla diyorum, yan yana 2 kolonu birlestirir-->
+                <td colspan="2">css baslangic ve ileri seviye egitim</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    <!--thead ve tbody gorunumu etkilemez ama dedigim gibi standart bir kullanim oldugu icin boyle kullanmaliyiz-->
+
+</body>
+
+</html>
